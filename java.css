@@ -1,0 +1,54 @@
+/* Apply a smooth gradient background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Clock card with subtle transitions */
+#card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 40px 60px;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Clock text with glowing effect */
+#clock {
+    font-size: 64px;
+    font-weight: bold;
+    color: #00ffe7;
+    text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Message text styling */
+#message {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
